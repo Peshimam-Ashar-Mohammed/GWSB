@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Filz 🤍</title>
+  <meta name="description" content="A comforting digital letter, made with care just for you." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Floating particles canvas -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Main wrapper -->
+  <div class="page-wrapper">
+
+    <!-- Header / Hero -->
+    <header class="hero" id="hero">
+      <h1 class="title fade-in">For Filz 🤍</h1>
+      <p class="subtitle fade-in delay-1">In case today feels a little too much…</p>
+      <div class="title-divider fade-in delay-2"></div>
+    </header>
+
+    <!-- Buttons Section -->
+    <section class="buttons-section" id="buttons-section">
+      <button class="mood-btn fade-in delay-2" id="btn-unwell" data-target="card-unwell">
+        <span class="btn-icon">🤍</span>
+        <span class="btn-text">I don't feel well</span>
+      </button>
+      <button class="mood-btn fade-in delay-3" id="btn-exam" data-target="card-exam">
+        <span class="btn-icon">😭</span>
+        <span class="btn-text">Exam stress</span>
+      </button>
+      <button class="mood-btn fade-in delay-4" id="btn-letter" data-target="letter-overlay">
+        <span class="btn-icon">💌</span>
+        <span class="btn-text">Open something for you</span>
+      </button>
+      <button class="mood-btn fade-in delay-5" id="btn-surprise">
+        <span class="btn-icon">✨</span>
+        <span class="btn-text">Tap for a surprise</span>
+      </button>
+    </section>
+
+    <!-- Card: I don't feel well -->
+    <div class="message-card hidden" id="card-unwell">
+      <button class="card-close" aria-label="Close">&times;</button>
+      <div class="card-inner">
+        <p class="card-msg" style="--i:0">Hey… slow down a little 🤍</p>
+        <p class="card-msg" style="--i:1">Please drink some water</p>
+        <p class="card-msg" style="--i:2">Rest a bit, you deserve it</p>
+        <p class="card-msg" style="--i:3">Get well soon baddie 💅</p>
+      </div>
+    </div>
+
+    <!-- Card: Exam stress -->
+    <div class="message-card hidden" id="card-exam">
+      <button class="card-close" aria-label="Close">&times;</button>
+      <div class="card-inner">
+        <p class="card-msg" style="--i:0">Good luck for tomorrow 🤍</p>
+        <p class="card-msg" style="--i:1">You're going to do better than you think</p>
+        <p class="card-msg" style="--i:2">Just stay calm and write what you know</p>
+        <p class="card-msg" style="--i:3">I'm proud of you already</p>
+      </div>
+    </div>
+
+    <!-- Surprise toast -->
+    <div class="surprise-toast hidden" id="surprise-toast">
+      <p id="surprise-text"></p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer fade-in delay-5">
+      <p>made with care, just for you 🤍</p>
+    </footer>
+  </div>
+
+  <!-- Full-screen Letter Overlay -->
+  <div class="letter-overlay hidden" id="letter-overlay">
+    <div class="letter-backdrop"></div>
+    <div class="letter-container">
+      <button class="letter-close" id="letter-close" aria-label="Close letter">&times;</button>
+      <div class="letter-paper">
+        <div class="letter-content" id="letter-content"></div>
+        <div class="letter-cursor" id="letter-cursor">|</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
